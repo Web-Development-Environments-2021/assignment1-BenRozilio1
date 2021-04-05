@@ -57,6 +57,7 @@
 	transition: top 0.3s;
 	position:fixed;
 	width:100% ;
+	z-index: 1000;
   }
   
   /* Style the links inside the navigation bar */
@@ -198,7 +199,7 @@ body{
 }
 
 .social-menu ul li:nth-child(3) a:hover{
-	background-color: #af0606;
+	background-color: #771e43;
 }
 
 
