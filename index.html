@@ -589,22 +589,32 @@
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
     <label for="lname">Email</label>
-    <input type="text" id="Email" name="lastname" placeholder="Your Email..">
+    <input type="text" id="email" name="lastname" placeholder="Your Email..">
 
     <label for="sub">subject</label>
     <input type="text" id="subject" name="lastname" placeholder="Write something.." style="height: 200px;">
 
 
-    <input type="submit" value="Send" onclick="myFunction()">
+    <input type="submit" value="Send" onclick="ValidateEmail()">
   </form>
 </div>
-
 <script>
-function myFunction() {
-  var inpObj = document.getElementById("fname");
-  if (!inpObj.checkValidity()) {
-    document.getElementById("demo").innerHTML = inpObj.validationMessage;
-  }
+  function ValidateEmail(inputText)
+{
+let inputText=document.getElementById("email").value;
+var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+alert("You have entered a valid email address!");    //The pop up alert for a valid email address
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");    //The pop up alert for an invalid email address
+document.form1.text1.focus();
+return false;
+}
 }
 </script>
 
